@@ -1682,5 +1682,16 @@ input, select, textarea {
 			height: 100%;
 			background-color: rgba(0, 0, 0, 0.838); /* Adjust the opacity and RGB values as needed */
 		  }
+
+		  #mute-button {
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			padding: 10px;
+			background-color: #ffffff37;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		  }
 		  
-					
+		  

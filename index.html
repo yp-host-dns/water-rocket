@@ -35,6 +35,9 @@ Water Rocket by YP
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
+						<button onclick="toggleMute()" type="button">
+							<i id="volume-icon" class="fas fa-volume-mute"></i>
+						  </button>
 					</header>
 
 				<!-- Main -->
@@ -53,9 +56,9 @@ Water Rocket by YP
 								<h2 class="major">Downloads</h2>
 								<span class="image main"><img src="images/down.jpg" alt="" /></span>
 								<p> Here is your Downloads <br>
-								01.<a href="Water-Boost-Rockets.pdf" target="_blank">Rocket Presentation - ACCIMT (LK)</a><br>
-								02.<a href="wr_booklet_print.pdf" target="_blank">Physics of the Water Rocket -NPL (UK)</a> <br>
-								03.<a href="water_rocket_simulator.zip" target="_blank">Water Rocket Simulation (Windows)</a>
+								01.<a href="Water-Boost-Rockets.pdf">Rocket Presentation - ACCIMT (LK)</a><br>
+								02.<a href="wr_booklet_print.pdf">Physics of the Water Rocket -NPL (UK)</a> <br>
+								03.<a href="water_rocket_simulator.zip">Water Rocket Simulation (Windows)</a>
 							</p>
 							</article>
 
@@ -347,14 +350,49 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 		<!-- BG -->
 			<!-- <div id="bg"></div> -->
-			<div id="video-container"></div>
 			<div id="video-container">
 				<div id="overlay"></div>
-				<video src="https://cdn-drive.yp-dns-and-hosting.workers.dev/0:/NPL%20Water%20Rocket%20Challenge%202019.mp4" autoplay loop muted></video>
+			  
+				<video id="myVideo" controls autoplay loop muted>
+				  <source src="https://cdn-drive.yp-dns-and-hosting.workers.dev/0:/NPL%20Water%20Rocket%20Challenge%202019.mp4" type="video/mp4">
+				</video>
 			  </div>
 			  
 
+			  
+			  <script>
+				let vid = document.getElementById("myVideo");
+				var volumeIcon = document.getElementById('volume-icon');
+				var isMuted = true;
+			  
+				function toggleMute() {
+				  if (isMuted) {
+					vid.muted = false;
+					volumeIcon.classList.remove('fa-volume-mute');
+					volumeIcon.classList.add('fa-volume-up');
+				  } else {
+					vid.muted = true;
+					volumeIcon.classList.remove('fa-volume-up');
+					volumeIcon.classList.add('fa-volume-mute');
+				  }
+			  
+				  isMuted = !isMuted;
+				}
+			  </script>
+			  >
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+
+
 		<!-- Scripts -->
+			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
